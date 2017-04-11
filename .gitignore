@@ -2,3 +2,5 @@ venv
 node_modules
 assets/bundles/main-*.js
 api/migrations
+db.sqlite3
+api/__pycache__
