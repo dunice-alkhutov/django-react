@@ -32219,8 +32219,9 @@ module.exports = traverseAllChildren;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_board__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_boards__ = __webpack_require__(367);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_router__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_reactstrap__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_dashboard__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_router__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_reactstrap__ = __webpack_require__(282);
 // var React = require('react')
 // var ReactDOM = require('react-dom')
 // var Button = require('react-bootstrap/lib/Button');
@@ -32235,14 +32236,16 @@ module.exports = traverseAllChildren;
 
 
 
+
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  __WEBPACK_IMPORTED_MODULE_5_react_router__["a" /* Router */],
-  { history: __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* browserHistory */] },
+  __WEBPACK_IMPORTED_MODULE_6_react_router__["b" /* Router */],
+  { history: __WEBPACK_IMPORTED_MODULE_6_react_router__["c" /* hashHistory */] },
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_5_react_router__["c" /* Route */],
+    __WEBPACK_IMPORTED_MODULE_6_react_router__["d" /* Route */],
     { path: '/', component: __WEBPACK_IMPORTED_MODULE_2__app__["a" /* default */] },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_router__["d" /* IndexRoute */], { component: __WEBPACK_IMPORTED_MODULE_4__components_boards__["a" /* default */] }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_router__["c" /* Route */], { path: 'board', component: __WEBPACK_IMPORTED_MODULE_3__components_board__["a" /* default */] })
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_router__["e" /* IndexRoute */], { component: __WEBPACK_IMPORTED_MODULE_4__components_boards__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_router__["d" /* Route */], { path: 'boards/:board_id', component: __WEBPACK_IMPORTED_MODULE_3__components_board__["a" /* default */] }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_router__["d" /* Route */], { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_dashboard__["a" /* default */] })
   )
 ), document.getElementById('container'));
 
@@ -34673,16 +34676,21 @@ class BoardPage extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: 'row' },
+      { className: 'container' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'p',
-        null,
-        '\u043C\u0430\u0437\u0430\u0444\u0430\u043A\u0430'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'p',
-        null,
-        '12312'
+        'div',
+        { className: 'row' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          '\u043C\u0430\u0437\u0430\u0444\u0430\u043A\u0430'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'ID:',
+          this.props.params.board_id
+        )
       )
     );
   }
@@ -35014,10 +35022,10 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* unused harmony reexport formatPattern */
 /* components */
 
-/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0__Router__, "a")) __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Router__["a"]; });
+/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0__Router__, "a")) __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__Router__["a"]; });
 
 
-/* unused harmony reexport Link */
+/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_1__Link__, "a")) __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__Link__["a"]; });
 
 
 /* unused harmony reexport IndexLink */
@@ -35032,13 +35040,13 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* unused harmony reexport IndexRedirect */
 
 
-/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_5__IndexRoute__, "a")) __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
+/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_5__IndexRoute__, "a")) __webpack_require__.d(exports, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
 
 
 /* unused harmony reexport Redirect */
 
 
-/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_7__Route__, "a")) __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_7__Route__, "a")) __webpack_require__.d(exports, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 
 
 /* utils */
@@ -35064,10 +35072,10 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* histories */
 
 
-/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_12__browserHistory__, "a")) __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_12__browserHistory__["a"]; });
+/* unused harmony reexport browserHistory */
 
 
-/* unused harmony reexport hashHistory */
+/* harmony reexport */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_13__hashHistory__, "a")) __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_13__hashHistory__["a"]; });
 
 
 /* unused harmony reexport createMemoryHistory */
@@ -38765,7 +38773,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(342);
 
 
-/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a);
+/* unused harmony default export */ var _unused_webpack_default_export = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a);
 
 /***/ },
 /* 359 */
@@ -38926,7 +38934,7 @@ function getRouteParams(route, params) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(342);
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default.a);
+/* harmony default export */ exports["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default.a);
 
 /***/ },
 /* 363 */
@@ -39421,12 +39429,14 @@ module.exports = function (str) {
 /* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reactstrap__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(305);
+
 
 
 
 const BoardCard = props => {
     console.log(props);
-    let url = `/boards/${props.id}`;
+    let url = `boards/${props.id}`;
     return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_0_reactstrap__["a" /* Col */],
         { sm: '4' },
@@ -39447,8 +39457,8 @@ const BoardCard = props => {
                 __WEBPACK_IMPORTED_MODULE_0_reactstrap__["e" /* Button */],
                 null,
                 __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-                    'a',
-                    { href: url },
+                    __WEBPACK_IMPORTED_MODULE_2_react_router__["a" /* Link */],
+                    { to: url },
                     'Go to '
                 )
             )
@@ -39514,6 +39524,30 @@ class Boards extends __WEBPACK_IMPORTED_MODULE_1_react__["Component"] {
     }
 }/* harmony export */ exports["a"] = Boards;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(80)))
+
+/***/ },
+/* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class Dashboard extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'row' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'col-sm-3' }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'col-sm-9' })
+            )
+        );
+    }
+}/* harmony export */ exports["a"] = Dashboard;
 
 /***/ }
 /******/ ]);
