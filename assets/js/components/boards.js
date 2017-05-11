@@ -1,15 +1,16 @@
 import { Card, Button, CardTitle, CardText, Row, Col  } from 'reactstrap';
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 const BoardCard = (props) => {
   console.log(props)
-  let url = `/boards/${props.id}`
+  let url = `boards/${props.id}`
   return (
     <Col sm="4">
         <Card block>
           <CardTitle>{props.data.title}</CardTitle>
           <CardText>{props.data.description}</CardText>
-          <Button><a href={url}>Go to </a></Button>
+          <Button><Link to={url}>Go to </Link></Button>
         </Card>
       </Col>
   );
